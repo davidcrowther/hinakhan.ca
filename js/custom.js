@@ -4,11 +4,7 @@ $(document).ready(function() {
 
   $('form.form-1').validate({
       rules: {
-          name: {
-          minlength: 2,
-          required: true
-        },  
-          email: {
+        'EMAIL': {
           minlength: 2,
           required: true,
           email: true
@@ -19,22 +15,12 @@ $(document).ready(function() {
       },
       success: function(label) {
         $(label).text('OK!').addClass('valid').closest('.form-control').addClass('has-success');
-
-      }, 
-      messages: { 
-       email: {
-         email: "Your email address must be in the format of 'email@yourdomain.com'"
-        }
-      }
+      } 
     });
 
     $('form.form-2').validate({
       rules: {
-          name: {
-            minlength: 2,
-            required: true
-          },  
-          email: {
+        'EMAIL': {
           minlength: 2,
           required: true,
           email: true
@@ -45,13 +31,7 @@ $(document).ready(function() {
       },
       success: function(label) {
         $(label).text('OK!').addClass('valid').closest('.form-control').addClass('has-success');
-
-      }, 
-      messages: { 
-       email: {
-         email: "Your email address must be in the format of 'email@yourdomain.com'"
-        }
-      }
+      } 
     });
 
 
